@@ -12,3 +12,4 @@ src/main/webapp/META-INF
 src/main/webapp/static/components
 test-output/
 bower_components
+node_modules

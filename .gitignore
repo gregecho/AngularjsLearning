@@ -11,3 +11,4 @@ src/main/webapp/META-INF
 *.iml
 src/main/webapp/static/components
 test-output/
+bower_components

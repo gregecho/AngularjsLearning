@@ -1,6 +1,5 @@
 ## Context ##
 > #### What is AngularJS and Advantages ####
-> #### 面向对象设计原则 ####
 
 ## Content ##
 ### 1. What is AngularJS ###
@@ -15,4 +14,10 @@ AngularJS is a client side MVC framework, which
 + Testability(Benefit by MVC)
 + Smooth Integration with 3rd party libraries
 
+### 3. Bootstrap AngularJS ###
+An AngularJS application is bootstrapped using ng-app directive.It refers to the part of your HTML which will be controlled/managed by AngularJS.
+
+### 4. Data binding ###
+The ng-model directive is used with input fields to get access to the user input inot JavaScript variables.
+ng-bind and the double-curly notation{{}} are almost same and can be used interchangeable. ng-bind & {{variable }} notation are used to get the value from the variable referred by ng-model and display that value in the tag ng-bind is applied on [or on the place {{ variable }} is used], and keeping the value up to date if it changes.
 

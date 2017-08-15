@@ -1,0 +1,49 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Nested Controller Demo</title>
+    <style>
+        body {
+            font-family: "Arial";
+            background-color: #E2E2DC
+        }
+
+        div {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="FirstController as first">
+        type : {{ first.type }}
+        <div ng-controller="SecondController as second">
+            type: {{ second.type }} Parent type: {{ first.type }}
+            <div ng-controller="ThirdController as third">
+                type: {{ third.type }} Parent type: {{ second.type }} Parent parent type: {{ first.type }}
+            </div>
+        </div>
+    </div>
+    <script src="\bower_components\angular\angular.js">
+    </script>
+    <script>
+        angular.module('myApp', [])
+            .controller('FirstController', [function () {
+                var self = this;
+                self.type = 'FirstController';
+            }])
+            .controller('SecondController', [function () {
+                var self = this;
+                self.type = 'SecondController';
+            }])
+            .controller('ThirdController', [function () {
+                var self = this;
+                self.type = 'ThirdController';
+            }]);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html ng-app="myApp">
+
+<head>
+    <title>Controller Demo</title>
+</head>
+
+<body ng-controller="AppController as ctrl">
+    <label>Name: </label><input type="text" ng-model="ctrl.name" placeholder="Enter your name" /> <br/><br/>
+    <span ng-bind="ctrl.message"></span><span ng-bind="ctrl.name"></span><br/><br/>
+    <button ng-click="ctrl.changeMessage()"> Change Message</button>
+    <button ng-click="ctrl.resetMessage()"> Reset Message</button>
+    <script src="\bower_components\angular\angular.js">
+    </script>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('AppController',[function(){
+            var self = this;
+            self.name = '';
+            self.message = 'Hello';
+            self.changeMessage = function(){
+                self.message = 'Bye';
+            };
+            self.resetMessage = function(){
+                self.message = 'Hello';
+            };
+        }]);
+    </script>
+
+</body>
+
+</html>

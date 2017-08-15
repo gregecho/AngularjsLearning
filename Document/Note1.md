@@ -119,9 +119,11 @@ One of the best explanation available on AngularJS scope can be found at [This l
 
 ### 7. Controller demo ###
 示例代码：
-> [AbstractFactoryPattern源代码][1]    
+> [AngularJS controller basic demo][1]    
+> [AngularJS Nested Controller Demo][3]    
 
-[1]: https://github.com/gregecho/JavaDesignPattern/tree/master/AbstractFactoryPattern/src/main
+[1]: https://github.com/gregecho/AngularjsLearning/tree/master/AngularjsDemo1/AngularJSControllerDemo.html
+[3]: https://github.com/gregecho/AngularjsLearning/tree/master/AngularjsDemo1/NestedControllerDemo.html
 
 
 -----

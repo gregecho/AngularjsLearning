@@ -1,0 +1,64 @@
+<html ng-app="myApp" class="ng-cloak">
+
+<head>
+    <title>AngularJS Filter Example</title>
+</head>
+
+<body ng-controller="AppController as ctrl">
+    <div>
+        Name in UPPERCASES: {{ctrl.name | uppercase}}
+    </div>
+    <div>
+        Name in lowercases: {{ctrl.name | lowercase}}
+    </div>
+    <div>
+        First 3 letters of Name in lowercases: {{ctrl.name | lowercase | limitTo:3}}
+    </div>
+    <div>
+        Quantity as a number: {{ctrl.quantity | number}}
+    </div>
+    <div>
+        Quantity as a number with 3 decimals: {{ctrl.quantity | number:3}}
+    </div>
+    <div>
+        Price with a currency: {{ctrl.price | currency}}
+    </div>
+    <div>
+        Price with a Specific Currency : {{ctrl.price | currency:'EUR'}}
+    </div>
+    <div>
+        JSON object: {{ctrl.jsonObj | json}}
+    </div>
+    <div>
+        Date with default format (timestamp): {{ctrl.startAt}}
+    </div>
+    <div>
+        Date with default 'date' format: {{ctrl.startAt | date}}
+    </div>
+    <div>
+        Date with specific built-in format: {{ctrl.startAt | date:'short'}}
+    </div>
+    <div>
+        Date with custom format: {{ctrl.startAt | date:"MM/dd/yyyy 'at' h:mma"}}
+    </div>
+
+    <script src="\bower_components\angular\angular.js">
+    </script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('AppController', [function () {
+            var self = this;
+            self.name = 'Shaun Pollock';
+            self.price = 1000;
+            self.quantity = 5;
+            self.jsonObj = {
+                strng: 'bla',
+                num: 123
+            };
+            self.startAt = new Date().getTime();
+        }]);
+    </script>
+
+</body>
+
+</html>
